@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        body{
+            background-color: rgb(100, 212, 212);
+            color: rgb(39, 45, 51);
+            font: normal 1.5em arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando aula com Dom</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Tentando utilizar o Dom</p>
+    <div class="msg">Clique em mim</div>
+    <div class="msg">Hello World</div>
+    <script>
+
+     var r = document.getElementsByTagName('p')[1]
+     document.write(r.innerText)
+     r.style.background = "yellow"
+     
+     var m = document.querySelector('div.msg')
+     m.style.background = 'yellow'
+    </script>
+
+</body>
+</html>

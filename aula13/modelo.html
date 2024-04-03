@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body{
+            text-align: center;
+            font: normal 1em arial;  
+        }
+        h1{
+            color:white;
+            text-shadow:rgba(0, 0, 0, 0.438) ;
+        }
+        section{
+            margin: auto;
+            max-width: 350px;
+            width:100%;
+            height:210px;
+            background-color:white;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.034);
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.274);
+        }
+        
+        div#resultadoTela{
+           width: 200px;
+           padding:10px;
+           margin: auto;
+          
+           
+        }
+        div > img{
+            padding:10px;
+            display: block;
+            margin: auto;
+            width: 150px;
+            height: 150px;
+            border-radius:50% ;
+           
+        }
+        footer{
+            color: white;
+           font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body >
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section class="w3-container w3-center w3-animate-top">
+       
+        <div id="resultadoTela"> 
+        </div>
+        <div>
+            <img id="foto" src="/aula13/manha.jpg">
+        </div>
+       
+    </section>
+    <footer>
+        <p>Todos os direitos reservados</p>
+    </footer>
+    <script>
+        var hora = new Date()
+        hora = hora.getHours()
+        resultadoTela = document.getElementById('resultadoTela').innerText = `Agora são ${hora} horas.`
+        tela = document.getElementsByTagName('body')[0]
+        foto = document.getElementById('foto')
+        if(hora < 12)
+        {
+            foto.src= '/aula13/manha.jpg'
+            tela.style.background = 'rgb(224, 193, 127)'
+
+        }else if(hora < 18)
+        {
+            foto.src= '/aula13/tarde.jpg'
+            tela.style.background = 'rgb(214, 156, 79)'
+
+        }
+        else
+        {
+           foto.src= '/aula13/noite.jpg'
+           tela.style.background = 'rgb(44, 39, 39)'
+        }
+       
+        
+        
+        
+      
+
+    </script>
+</body>
+</html>

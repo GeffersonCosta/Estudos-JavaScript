@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 1.2em arial;
+        }
+        div{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estrangeiro ou Nacional</h1>
+    <p>Introduza o país</p>
+    <input type="text" id="pais">
+    <input type="button" value="Verificar" onclick="check()">
+    <div id="res">Resultado</div>
+    <script>
+            function check(){
+
+                var nac = document.getElementById('pais').value
+                var resultado = document.getElementById('res')
+                if(nac == 'Brasil'){
+                    resultado.innerHTML = 'Nacional'
+                }
+                else
+                {
+                    resultado.innerHTML = 'Estrangeiro'
+                }
+
+            }
+    </script>
+</body>
+</html>

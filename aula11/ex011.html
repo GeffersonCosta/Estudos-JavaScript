@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condicionais</title>
+</head>
+<style>
+    body{
+        font: normal 1.1em arial;
+    }
+    input{
+        font-size: 16px;
+    }
+    div{
+        margin-top: 15px;
+    }
+</style>
+<body>
+      <h1>Sistemas de multas</h1>
+      <input type="number" name="vel" id="vel">
+      <input type="button" value="Verificar" onclick="buscar()">
+      <div id="velocidade">Verificando...</div>
+      <script>
+        function buscar(){
+          var velocidade = document.getElementById('vel').value
+          if(velocidade > 60){
+             var resultado =  document.getElementById('velocidade')
+             resultado.innerText = `Sua velocidade é ${velocidade}Km/h, Multado`
+             resultado.style.color = 'red'
+          }
+          else{
+              var resultado =  document.getElementById('velocidade')
+              resultado.innerText = `Sua velocidade é ${velocidade}Km/h`
+              resultado.style.color = 'green'
+          }
+          
+
+        }
+      </script>
+</body>
+</html>
