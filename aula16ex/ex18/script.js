@@ -1,24 +1,26 @@
 
      var vet = [] 
      var resultado = document.getElementById('outputRsultado')
-     
+     var numero = document.getElementById('numero')
 function Adicionar(){
      resultado.innerText = ''
-     var numero = document.getElementById('numero').value
-     numero = Number(numero)
-     if(numero < 1 || numero > 100){
+     if(Number(numero.value) < 1 || Number(numero.value) > 100){
           alert('Valor inválido: Digite valores entre 1 e 100')
+          numero.focus()
      }else{
-          if(validador(numero) == true){ // chamada para validador
+          if(validador(Number(numero.value)) == true){ // chamada para validador
                alert('Valor inválido ou ja encontrado na lista')
+               numero.focus()
           }else{
                var cont = vet.length
-               vet[cont] = numero
+               vet[cont] = Number(numero.value)
                var ValoresOutput = document.getElementById('ValoresOutput')
           
                let opcao = document.createElement('option')
-               opcao.text = `Valor ${numero} adicionado.`
+               opcao.text = `Valor ${Number(numero.value)} adicionado.`
                ValoresOutput.appendChild(opcao)
+               numero.value = ' '
+               numero.focus() 
 
           }   
 
@@ -38,6 +40,7 @@ function Finalizar(){ //faz a varredura no vetor para trazer os resultados finai
      
      if(vet.length == 0){
           alert('Adicione valores antes de finalizar!')
+          numero.focus()
      }else{
           resultado.innerText = ""
           vet.sort()
