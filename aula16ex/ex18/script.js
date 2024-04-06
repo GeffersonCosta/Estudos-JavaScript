@@ -23,9 +23,7 @@ function Adicionar(){
                numero.focus() 
 
           }   
-
      }
-    
 }
 function validador(x){ // verificar se existe numeros iguais no vetor array
      cont = vet.length
@@ -35,7 +33,6 @@ function validador(x){ // verificar se existe numeros iguais no vetor array
           }
      }
 }
-
 function Finalizar(){ //faz a varredura no vetor para trazer os resultados finais
      
      if(vet.length == 0){
@@ -50,17 +47,13 @@ function Finalizar(){ //faz a varredura no vetor para trazer os resultados finai
           for(c = 0; c < vet.length; c++){  
               soma += vet[c]
               if(max < vet[c]){
-               temp = max
                max = vet[c]
             } 
-           }
-             menor=vet[0]
-            for(c = 0; c < vet.length; c++){    
-             if(menor > vet[c]){
-                temp = menor
-                menor = vet[c]
-            } 
-         }
+            if(menor > vet[c]){
+               menor = vet[c]
+           } 
+          }
+            
            
            var media = soma/vet.length
            resultado.innerHTML += `<br> Ao todo, temos ${vet.length} números cadastrados. </br>`  
