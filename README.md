@@ -1,6 +1,5 @@
-Projeto utilizando conceitos ministrado na aula de Javascript fazendo uso de DOM e laço de reptição e conceitos básicos de array(vetor)
-     <a href="https://geffersoncosta.github.io/Estudos-JavaScript/aula16ex/ex18/index.html">Projeto</a>
-    ## Projeto Analisador de Números
+## Projeto utilizando conceitos ministrado na aula de Javascript fazendo uso de DOM e laço de reptição e conceitos básicos de array(vetor)
+ ## Projeto Analisador de Números
     <p>Adiciona número no campo</p>
     <p>Permite apenas números entre 1 e 100</p>
     <p>Não permite adicionar números negativos ou campos vazios</p>
